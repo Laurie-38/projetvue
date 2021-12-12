@@ -34,17 +34,8 @@ export default {
       axios
         .get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${name}`)
         .then((response) => {
-          //console.log(response);
-          //let categories = response.data.drinks;
-          //let arrayCategories = [];
           let arrayByCate = response.data.drinks;
-          //console.log(arrayByCate);
-
-          //(this.imgName = response.data.drinks[index].strDrinkThumb)
-          //console.log(response.data.drinks);
-
           this.cateData = arrayByCate;
-          //console.log(this.cateData)
         })
         .catch((error) => console.log(error));
     },
